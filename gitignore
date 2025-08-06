@@ -1,0 +1,33 @@
+
+## Build output
+bin/
+obj/
+
+## User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Rider
+.idea/
+
+## Visual Studio Code
+.vscode/
+
+## Secrets
+appsettings.Development.json
+
+## Logs
+*.log
+
+## EF Core migrations if manually excluded
+#migrations/
+
+## OS generated files
+.DS_Store
+Thumbs.db
+
+## Others
+.env
+node_modules/
