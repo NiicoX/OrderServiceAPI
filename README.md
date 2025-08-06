@@ -1,4 +1,3 @@
-
 # 🛒 OrderServiceAPI
 
 es una API RESTful desarrollada en ASP.NET Core 8 + Entity Framework Core + MySQL. Permite la gestión de órdenes de compra en una tienda en línea. Forma parte de un sistema de e-commerce en desarrollo y se encarga exclusivamente del registro, consulta y actualización de pedidos (sin incluir lógica de pagos).
@@ -85,7 +84,7 @@ Ingresá a Swagger:
 }
 ```
 
-�?Verifica stock, calcula subtotales, guarda orden y descuenta el stock.
+�?Verifica stock, calcula subtotales, guarda orden y descuenta el stock.
 
 ---
 
@@ -146,27 +145,3 @@ OrderServiceAPI/
 ├── Program.cs
 └── appsettings.json
 ```
-
----
-
-## �?Checklist del TP
-
-- [x] Crear orden con control de stock
-- [x] Obtener orden individual
-- [x] Listar órdenes con filtros
-- [x] Cambiar estado de orden
-- [x] EF Core con migraciones y MySQL
-- [x] Código limpio y organizado
-- [x] Swagger activo
-
----
-
-## 👨‍�?Información académica
-
-- **Alumno**: Lastra Mario, Barranquero Germán, Cruz Gareca Adólfo
-- **Carrera**: Ingeniería en Sistemas
-- **Universidad**: UTN �?Facultad Regional Tucumán
-- **Materia**: Desarrollo de Software
-- **Año**: 2025
-
----
