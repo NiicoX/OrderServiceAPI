@@ -2,6 +2,8 @@
 ## Build output
 bin/
 obj/
+.vs/
+orderservicedb - schema.sql
 
 ## User-specific files
 *.user
