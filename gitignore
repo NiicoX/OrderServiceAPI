@@ -24,7 +24,7 @@ appsettings.Development.json
 *.log
 
 ## EF Core migrations if manually excluded
-#migrations/
+migrations/
 
 ## OS generated files
 .DS_Store
