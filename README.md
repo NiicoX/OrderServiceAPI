@@ -150,7 +150,7 @@ dotnet test
 ```
 
 🔹 Endpoint de prueba para insertar productos (opcional)
-**POST** `/api/seed`  
+**POST** `/api/seed`
 Inserta productos ficticios para pruebas en la base de datos.
 
 ---
