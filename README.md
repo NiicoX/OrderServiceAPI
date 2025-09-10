@@ -143,14 +143,16 @@ Estados válidos:
 
 ---
 
-## 🧪 Tests unitarios (almacenamiento en memoria y no en db)
+### 🧪 Tests unitarios (almacenamiento en memoria y no en db)
 El proyecto incluye pruebas con xUnit y InMemoryDbContext:
 ```bash
 dotnet test
 ```
 
-🔹 Endpoint de prueba para insertar productos (opcional)
-**POST** `/api/seed`
+### 🔹 Endpoint de prueba para insertar productos (opcional):
+
+ **POST** `/api/seed`
+ 
 Inserta productos ficticios para pruebas en la base de datos.
 
 ---
