@@ -11,7 +11,8 @@ Es una API RESTful desarrollada en ASP.NET Core 8 + Entity Framework Core + MySQ
 - Entity Framework Core 8.0.6
 - MySQL 8.x
 - Pomelo.EntityFrameworkCore.MySql
-- Swagger (Swashbuckle)
+- Swagger (Swashbuckle) + JWT Auth
+- xUnit (tests unitarios)
 
 ---
 
@@ -38,6 +39,11 @@ Editá `appsettings.json`:
 ```json
 "ConnectionStrings": {
   "DefaultConnection": "Server=localhost;Database=OrderServiceDB;User=root;Password=tu_contraseña;"
+},
+"Jwt": {
+  "Key": "clave_secreta_segura", // <--- Cadena de 32 digitos obligatoria
+  "Issuer": "OrderServiceAPI",
+  "Audience": "OrderServiceAPIUsers"
 }
 ```
 
@@ -63,6 +69,17 @@ Ingresá a Swagger:
 
 ---
 
+## 🔑 Autenticación
+Login de usuario
+
+**POST** `/api/auth/login`
+```json
+{
+  "username": "admin",
+  "password": "1234"
+}
+```
+
 ## 📦 Endpoints implementados
 
 ### 🔹 Crear una orden
@@ -84,7 +101,7 @@ Ingresá a Swagger:
 }
 ```
 
-�?Verifica stock, calcula subtotales, guarda orden y descuenta el stock.
+✔️ Verifica stock, calcula subtotales, guarda orden y descuenta inventario.
 
 ---
 
@@ -126,10 +143,15 @@ Estados válidos:
 
 ---
 
-## 🧪 Endpoint de prueba para insertar productos (opcional)
+## 🧪 Tests unitarios (almacenamiento en memoria y no en db)
+El proyecto incluye pruebas con xUnit y InMemoryDbContext:
+```bash
+dotnet test
+```
 
+🔹 Endpoint de prueba para insertar productos (opcional)
 **POST** `/api/seed`  
-Inserta productos ficticios para pruebas.
+Inserta productos ficticios para pruebas en la base de datos.
 
 ---
 
@@ -137,11 +159,10 @@ Inserta productos ficticios para pruebas.
 
 ```
 OrderServiceAPI/
-├── Controllers/
-├── DTOs/
-├── Models/
-├── Services/
-├── Data/
+├── Core/               # Entidades y DTOs
+├── Infrastructure/     # Servicios, Data, Seguridad
+├── Controllers/        # Controladores Web API
+├── Tests/              # Pruebas unitarias con xUnit
 ├── Program.cs
 └── appsettings.json
 ```
