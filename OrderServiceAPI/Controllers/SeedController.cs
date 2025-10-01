@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using OrderServiceAPI.Data;
-using OrderServiceAPI.Models;
+using OrderServiceAPI.Infrastructure.Data;
+using OrderServiceAPI.Core.Entities;
 
 namespace OrderServiceAPI.Controllers
 {

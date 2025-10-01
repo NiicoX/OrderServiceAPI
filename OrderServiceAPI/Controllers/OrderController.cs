@@ -1,12 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using OrderServiceAPI.DTOs;
-using OrderServiceAPI.Models;
-using OrderServiceAPI.Services;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using OrderServiceAPI.Core.DTOs;
+using OrderServiceAPI.Core.Entities;
+using OrderServiceAPI.Core.Interfaces;
 
 namespace OrderServiceAPI.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize]
     public class OrderController : ControllerBase
     {
         private readonly IOrderService _orderService;
@@ -20,6 +22,9 @@ namespace OrderServiceAPI.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateOrder([FromBody] CreateOrderDto orderDto)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
             try
             {
                 var createdOrder = await _orderService.CreateOrderAsync(orderDto);
@@ -33,6 +38,10 @@ namespace OrderServiceAPI.Controllers
             {
                 return BadRequest(new { error = ex.Message });
             }
+            catch (Exception)
+            {
+                return StatusCode(500, new { error = "Ocurrió un error interno." });
+            }
         }
 
         // 2. Obtener todas las órdenes con filtros opcionales
@@ -43,25 +52,42 @@ namespace OrderServiceAPI.Controllers
             [FromQuery] int pageNumber = 1,
             [FromQuery] int pageSize = 10)
         {
-            var orders = await _orderService.GetAllOrdersAsync(status, customerId, pageNumber, pageSize);
-            return Ok(orders);
+            try
+            {
+                var orders = await _orderService.GetAllOrdersAsync(status, customerId, pageNumber, pageSize);
+                return Ok(orders);
+            }
+            catch (Exception)
+            {
+                return StatusCode(500, new { error = "Ocurrió un error interno." });
+            }
         }
 
         // 3. Obtener orden por ID
         [HttpGet("{id}")]
         public async Task<IActionResult> GetOrderById(Guid id)
         {
-            var order = await _orderService.GetOrderByIdAsync(id);
-            if (order == null)
-                return NotFound(new { error = "Orden no encontrada." });
+            try
+            {
+                var order = await _orderService.GetOrderByIdAsync(id);
+                if (order == null)
+                    return NotFound(new { error = "Orden no encontrada." });
 
-            return Ok(order);
+                return Ok(order);
+            }
+            catch (Exception)
+            {
+                return StatusCode(500, new { error = "Ocurrió un error interno." });
+            }
         }
 
         // 4. Cambiar estado de orden
-        [HttpPut("{id}/status")]
+        [HttpPatch("{id}/status")]
         public async Task<IActionResult> UpdateOrderStatus(Guid id, [FromBody] UpdateOrderStatusDto dto)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
             try
             {
                 var updatedOrder = await _orderService.UpdateOrderStatusAsync(id, dto.NewStatus);
@@ -73,6 +99,10 @@ namespace OrderServiceAPI.Controllers
             catch (ArgumentException ex)
             {
                 return BadRequest(new { error = ex.Message });
+            }
+            catch (Exception)
+            {
+                return StatusCode(500, new { error = "Ocurrió un error interno." });
             }
         }
     }

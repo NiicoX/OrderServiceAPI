@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "OrderServiceAPI.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "OrderServiceAPI.Core.DTOs.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "OrderServiceAPI.Controllers.OrderController",
     "Method": "CreateOrder",
     "RelativePath": "api/Order",
@@ -9,7 +25,7 @@
     "Parameters": [
       {
         "Name": "orderDto",
-        "Type": "OrderServiceAPI.DTOs.CreateOrderDto",
+        "Type": "OrderServiceAPI.Core.DTOs.CreateOrderDto",
         "IsRequired": true
       }
     ],
@@ -66,7 +82,7 @@
     "ContainingType": "OrderServiceAPI.Controllers.OrderController",
     "Method": "UpdateOrderStatus",
     "RelativePath": "api/Order/{id}/status",
-    "HttpMethod": "PUT",
+    "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -77,7 +93,7 @@
       },
       {
         "Name": "dto",
-        "Type": "OrderServiceAPI.DTOs.UpdateOrderStatusDto",
+        "Type": "OrderServiceAPI.Core.DTOs.UpdateOrderStatusDto",
         "IsRequired": true
       }
     ],

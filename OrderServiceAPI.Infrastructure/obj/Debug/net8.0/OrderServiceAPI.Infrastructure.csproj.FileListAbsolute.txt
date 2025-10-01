@@ -1,0 +1,16 @@
+D:\02.Desarrollo de Proyectos\05.ASP.NET CORE Web API\OrderServiceAPI\OrderServiceAPI.Infrastructure\bin\Debug\net8.0\OrderServiceAPI.Infrastructure.deps.json
+D:\02.Desarrollo de Proyectos\05.ASP.NET CORE Web API\OrderServiceAPI\OrderServiceAPI.Infrastructure\bin\Debug\net8.0\OrderServiceAPI.Infrastructure.dll
+D:\02.Desarrollo de Proyectos\05.ASP.NET CORE Web API\OrderServiceAPI\OrderServiceAPI.Infrastructure\bin\Debug\net8.0\OrderServiceAPI.Infrastructure.pdb
+D:\02.Desarrollo de Proyectos\05.ASP.NET CORE Web API\OrderServiceAPI\OrderServiceAPI.Infrastructure\bin\Debug\net8.0\OrderServiceAPI.Core.dll
+D:\02.Desarrollo de Proyectos\05.ASP.NET CORE Web API\OrderServiceAPI\OrderServiceAPI.Infrastructure\bin\Debug\net8.0\OrderServiceAPI.Core.pdb
+D:\02.Desarrollo de Proyectos\05.ASP.NET CORE Web API\OrderServiceAPI\OrderServiceAPI.Infrastructure\obj\Debug\net8.0\OrderServiceAPI.Infrastructure.csproj.AssemblyReference.cache
+D:\02.Desarrollo de Proyectos\05.ASP.NET CORE Web API\OrderServiceAPI\OrderServiceAPI.Infrastructure\obj\Debug\net8.0\OrderServiceAPI.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\02.Desarrollo de Proyectos\05.ASP.NET CORE Web API\OrderServiceAPI\OrderServiceAPI.Infrastructure\obj\Debug\net8.0\OrderServiceAPI.Infrastructure.AssemblyInfoInputs.cache
+D:\02.Desarrollo de Proyectos\05.ASP.NET CORE Web API\OrderServiceAPI\OrderServiceAPI.Infrastructure\obj\Debug\net8.0\OrderServiceAPI.Infrastructure.AssemblyInfo.cs
+D:\02.Desarrollo de Proyectos\05.ASP.NET CORE Web API\OrderServiceAPI\OrderServiceAPI.Infrastructure\obj\Debug\net8.0\OrderServiceAPI.Infrastructure.csproj.CoreCompileInputs.cache
+D:\02.Desarrollo de Proyectos\05.ASP.NET CORE Web API\OrderServiceAPI\OrderServiceAPI.Infrastructure\obj\Debug\net8.0\OrderServiceAPI.Infrastructure.sourcelink.json
+D:\02.Desarrollo de Proyectos\05.ASP.NET CORE Web API\OrderServiceAPI\OrderServiceAPI.Infrastructure\obj\Debug\net8.0\OrderSer.38B634F1.Up2Date
+D:\02.Desarrollo de Proyectos\05.ASP.NET CORE Web API\OrderServiceAPI\OrderServiceAPI.Infrastructure\obj\Debug\net8.0\OrderServiceAPI.Infrastructure.dll
+D:\02.Desarrollo de Proyectos\05.ASP.NET CORE Web API\OrderServiceAPI\OrderServiceAPI.Infrastructure\obj\Debug\net8.0\refint\OrderServiceAPI.Infrastructure.dll
+D:\02.Desarrollo de Proyectos\05.ASP.NET CORE Web API\OrderServiceAPI\OrderServiceAPI.Infrastructure\obj\Debug\net8.0\OrderServiceAPI.Infrastructure.pdb
+D:\02.Desarrollo de Proyectos\05.ASP.NET CORE Web API\OrderServiceAPI\OrderServiceAPI.Infrastructure\obj\Debug\net8.0\ref\OrderServiceAPI.Infrastructure.dll
